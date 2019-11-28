@@ -22,9 +22,9 @@ TODO: Description of the project, its structure, purpose, etc.
 
 
 
-## Scratch Org Setup (Open command line in project directory):
+## Scratch Org Setup (Open command line or terminal in your IDE):
 
-1) Create developer account, login to your dev account, go to setup/Dev Hun and turn it on
+1) Create developer account, login to your developer account, go to setup > Dev Hub > and Dev Hub on
 
    ```sh
     sfdx force:auth:web:login -d -a devHubAlias
