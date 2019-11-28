@@ -9,10 +9,6 @@ public without sharing class RatesRemoteCall extends RemoteCall{
         public Map<String, Decimal> rates;
     }
     
-    public class RatesRemoteCallRequest{
-        public String baseRate;
-    }
-    
     public RatesRemoteCall(){
         endPointURL = 'callout:RatesService';
         httpMethod = METHOD_GET;
@@ -23,13 +19,11 @@ public without sharing class RatesRemoteCall extends RemoteCall{
     }
     
     protected override String buildRequestBody() {
-        RatesRemoteCallRequest request = new RatesRemoteCallRequest();
-        String body = JSON.serialize(request);
-        return body;
+        return null;
     }
     
     protected override Object parseResponse(String responseBody) {
-        System.debug('RESPONSE: ' + responseBody);
-        return null;
+        return JSON.deserialize(responseBody, RatesRemoteCallResponse.class);
     }
+    
 }
